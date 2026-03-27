@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co Kupić?</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body{
+            background-color: #3b3b8f;
+            display: flex;
+            height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        nav{
+            width: 250px;
+            background-color: #5b5ba8;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .back-btn{
+            background-color: #4a4a9b;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 20px;
+            font-weight: bold;
+            display: block;
+            border-bottom: 2px solid #3b3b8f;
+        }
+
+        .nav-content{
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn{
+            background-color: #4a4a9b;
+            color: white;
+            border: none;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .btn-small{
+            font-size: 0.8rem;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        main{
+            flex-grow: 1;
+            padding: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bg-overlay{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-bg{
+            font-size: 12rem;
+            color: #8fbdfa;
+            opacity: 0.1;
+            transform: scaleY(-1);
+            font-family: serif;
+        }
+
+        .secret-bg{
+            font-size: 4rem;
+            color: #8fbdfa;
+            opacity: 0.1;
+            transform: scaleY(-1);
+            font-family: serif;
+            letter-spacing: 15px;
+        }
+
+        h1{
+            font-size: 3rem;
+            text-align: right;
+            margin-bottom: 40px;
+        }
+        .list-container{
+            font-size: 1.6rem;
+            line-height: 2.5;
+        }
+
+        .list-title{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="back-btn">Wróć</a>
+        <div class="nav-content">
+            <div class="btn">Co kupić?</div>
+            <div class="btn">Czego nie robić?</div>
+            <div class="btn">Jak sie zachowywać?</div>
+            <div class="btn">Jak bardzo ociekasz?</div>
+        </div>
+    </nav>
+    <main>
+        <div class="bg-overlay">
+            <div class="logo-bg">TRAPSTAR</div>
+            <div class="secret-bg">IT'S A SECRET</div>
+        </div>
+        <h1>Co kupić?</h1>
+
+        <div class="list-container">
+            <div class="list-title">Co kupić:</div>
+            <p>czarna pucha (puffer jacket) albo tech fleece</p>
+            <p>nike skimask albo jakakolwiek dripiarka kominiarka</p>
+            <p>dobry but w stylu Nike TN, SHOX albo jakies jordanki najlepiej 4-13</p>
+            <p>mala torba na ramie (najlepiej trapstar albo jakis inny designer)</p>
+            <p>proste czarne ciuchy (black, gray, navy)</p>
+            <p>no i oczywiscie maczeta mfh (oowiazkowo z militaria.pl) i gaz fox zloty</p>
+        </div>
+    </main>
+</body>
+</html>
