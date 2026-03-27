@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak zostać drillowcem</title>
+    <style>
+        @font-face {
+            font-family: 'JudasCaps';
+            src: url('judasc__.ttf');
+        }
+        
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            background-color: #3b3b8f;
+            display: flex;
+            height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        nav{
+            width: 250px;
+            background-color: #5b5ba8;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            gap: 15px;
+        }
+
+        .btn{
+            background-color: #4a4a9b;
+            color: white;
+            border: none;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-small{
+            font-size: 0.8rem;
+            margin-top: auto;
+            background: none;
+            text-align: left;
+            padding: 5px;
+        }
+
+        main{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h2{
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .logo-text{
+            font-size: 9rem;
+            font-weight: 900;
+            color: #8fbdfa;
+            line-height: 0.8;
+            font-family: 'JudasCaps', serif;
+            text-transform: uppercase;
+        }
+
+        .secret-text{
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #8fbdfa;
+            opacity: 0.6;
+            transform: scaleY(-1);
+            margin-top: 20px;
+            letter-spacing: 12px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="btn">co kupić?</button>
+        <button class="btn">czego nie robić?</button>
+        <button class="btn">jak sie zachowywać?</button>
+        <button class="btn ">jak bardzo ociekasz?</button>
+    </nav>
+    
+    <main>
+        <h2>JAK ZOSTAĆ DRILLOWCEM</h2>
+        <div class="logo-text">TRAPSTAR</div>
+        <div class="secret-text">IT'S A SECRET</div>
+    </main>
+</body>
+</html>
