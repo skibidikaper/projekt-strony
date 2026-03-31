@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wskaźnik dripu</title>
+    <style>
+        @font-face {
+            font-family: 'JudasCaps';
+            src: url('judascaps.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #3b3b8f;
+            display: flex;
+            height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        nav {
+            width: 250px;
+            background-color: #5b5ba8;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .back-btn {
+            background-color: #4a4a9b;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 20px;
+            font-weight: bold;
+            display: block;
+            border-bottom: 2px solid #3b3b8f;
+            text-align: center;
+        }
+
+        .back-btn:hover { background-color: #5353b3; }
+
+        .nav-content {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            background-color: #4a4a9b;
+            color: white;
+            border: none;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn:hover { background-color: #6363c4; }
+
+        .btn-small {
+            font-size: 0.8rem;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 60px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bg-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-text {
+            font-size: 12rem;
+            color: #8fbdfa;
+            font-family: 'JudasCaps', serif;
+        }
+
+        .secret-text {
+            font-size: 4rem;
+            color: #8fbdfa;
+            transform: scaleY(-1);
+            font-family: 'JudasCaps', serif;
+            letter-spacing: 15px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .calc-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .inputs-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-row label {
+            width: 100px;
+            font-size: 1.2rem;
+        }
+
+        .input-row input {
+            padding: 10px;
+            background-color: #5b5ba8;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            width: 150px;
+            text-align: center;
+        }
+
+        .result-circle {
+            width: 220px;
+            height: 220px;
+            background-color: #4a4a9b;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .result-circle span {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .result-circle .status {
+            font-size: 1.6rem;
+            color: #8fbdfa;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .calc-btn {
+            background-color: #8fbdfa;
+            color: #3b3b8f;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .bottom-note {
+            margin-top: auto;
+            font-size: 1rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-btn">WRÓĆ</a>
+        <div class="nav-content">
+            <a href="cokupic.html" class="btn">co kupić?</a>
+            <a href="czegonierobic.html" class="btn">czego nie robić</a>
+            <a href="jaksiezachowywac.html" class="btn">jak sie zachowywać</a>
+            <a href="wskaznik.html" class="btn btn-small" style="background-color: #6363c4;">jak bardzo ociekasz</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="bg-watermark">
+            <div class="logo-text">TRAPSTAR</div>
+            <div class="secret-text">IT'S A SECRET</div>
+        </div>
+
+        <h1>Wskaźnik dripu</h1>
+
+        <div class="calc-container">
+            <div class="inputs-group">
+                <div class="input-row">
+                    <label>Buty</label>
+                    <input type="number" id="in-buty" placeholder="0">
+                </div>
+                <div class="input-row">
+                    <label>Spodnie</label>
+                    <input type="number" id="in-spodnie" placeholder="0">
+                </div>
+                <div class="input-row">
+                    <label>Koszulka</label>
+                    <input type="number" id="in-koszulka" placeholder="0">
+                </div>
+                <div class="input-row">
+                    <label>Bluza</label>
+                    <input type="number" id="in-bluza" placeholder="0">
+                </div>
+                <div class="input-row">
+                    <label>Akcesoria</label>
+                    <input type="number" id="in-akcesoria" placeholder="0">
+                </div>
+                <button class="calc-btn" onclick="obliczDrip()">SPRAWDŹ</button>
+            </div>
+
+            <div class="result-circle">
+                <span>ociekasz czy posysasz?</span>
+                <div id="drip-status" class="status">-</div>
+            </div>
+        </div>
+
+        <div class="bottom-note">
+            tutaj w kwadracikach wpisujesz ceny swoich itków i sprawdzimy czy klasa czy obciach (ociekasz czy posysasz)
+        </div>
+    </main>
+
+    <script>
+        function obliczDrip() {
+            const buty = parseFloat(document.getElementById('in-buty').value) || 0;
+            const spodnie = parseFloat(document.getElementById('in-spodnie').value) || 0;
+            const koszulka = parseFloat(document.getElementById('in-koszulka').value) || 0;
+            const bluza = parseFloat(document.getElementById('in-bluza').value) || 0;
+            const akcesoria = parseFloat(document.getElementById('in-akcesoria').value) || 0;
+
+            const suma = buty + spodnie + koszulka + bluza + akcesoria;
+            const statusDiv = document.getElementById('drip-status');
+
+            if (suma > 5000) {
+                statusDiv.textContent = 'OCIEKASZ';
+                statusDiv.style.color = '#8fbdfa';
+            } else {
+                statusDiv.textContent = 'POSYSASZ';
+                statusDiv.style.color = '#ff4a4a';
+            }
+        }
+    </script>
+
+</body>
+</html>
